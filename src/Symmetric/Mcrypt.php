@@ -142,7 +142,7 @@ class Mcrypt implements SymmetricInterface
                 E_USER_DEPRECATED
             );
         }
-        if (! extension_loaded('mcrypt')) {
+        if (!function_exists('mcrypt_list_algorithms')) {
             throw new Exception\RuntimeException(sprintf(
                 'You cannot use %s without the Mcrypt extension',
                 __CLASS__
