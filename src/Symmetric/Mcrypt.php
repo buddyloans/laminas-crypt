@@ -135,13 +135,13 @@ class Mcrypt implements SymmetricInterface
      */
     public function __construct($options = [])
     {
-        if (PHP_VERSION_ID >= 70100) {
-            trigger_error(
-                'The Mcrypt extension is deprecated from PHP 7.1+. '
-                . 'We suggest to use Laminas\Crypt\Symmetric\Openssl.',
-                E_USER_DEPRECATED
-            );
-        }
+//        if (PHP_VERSION_ID >= 70100) {
+//            trigger_error(
+//                'The Mcrypt extension is deprecated from PHP 7.1+. '
+//                . 'We suggest to use Laminas\Crypt\Symmetric\Openssl.',
+//                E_USER_DEPRECATED
+//            );
+//        }
         if (!function_exists('mcrypt_list_algorithms')) {
             throw new Exception\RuntimeException(sprintf(
                 'You cannot use %s without the Mcrypt extension',
